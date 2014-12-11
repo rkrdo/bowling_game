@@ -1,9 +1,14 @@
 class Game
 
+  def initialize
+    @score = 0
+  end
+
   def score
-    0
+    @score
   end
 
   def add(pins)
+    @score += pins
   end
 end
