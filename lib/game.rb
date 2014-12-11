@@ -19,7 +19,9 @@ class Game
     score = 0
     ball = 0
     _frame.times do |current_frame|
-      score += (@throws[ball += 1] + @throws[ball += 1])
+      first_throw = @throws[ball += 1]
+      second_throw = @throws[ball +=1]
+      score += (first_throw + second_throw)
     end
     score
   end
