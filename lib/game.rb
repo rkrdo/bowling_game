@@ -11,19 +11,17 @@ class Game
   end
 
   def add(pins)
-    @throws[@current_throw] = pins
-    @current_throw += 1
+    @throws[@current_throw += 1] = pins
     @score += pins
   end
 
   def score_for_frame(_frame)
     score = 0
     ball = 0
-    while _frame > 0 && (ball < @current_throw) do
-      score += @throws[ball] + @throws[ball + 1]
-      ball += 2
-      _frame -= 1
+    _frame.times do |current_frame|
+      score += (@throws[ball += 1] + @throws[ball += 1])
     end
     score
   end
+
 end
