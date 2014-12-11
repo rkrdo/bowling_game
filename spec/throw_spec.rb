@@ -1,0 +1,2 @@
+describe Throw do
+end
