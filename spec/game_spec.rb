@@ -24,4 +24,19 @@ describe Game do
 
   end
 
+  describe "#score_for_frame" do
+    context "4 throws" do
+      it 'returns the score of the requested frame' do
+        g = Game.new
+        g.add 5
+        g.add 4
+        g.add 7
+        g.add 2
+        g.score.must_equal 18
+        g.score_for_frame(1).must_equal 9
+        g.score_for_frame(2).must_equal 18
+      end
+    end
+  end
+
 end
