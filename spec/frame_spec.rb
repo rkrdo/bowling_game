@@ -1,6 +1,5 @@
+require 'spec_helper'
 require 'frame'
-require 'minitest/autorun'
-require 'minitest-spec-context'
 
 describe Frame do
 
