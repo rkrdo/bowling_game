@@ -11,6 +11,14 @@ describe Frame do
         f.get_score.must_equal 0
       end
     end
+
+    context "with one throw" do
+      it "returns the throw's result" do
+        f = Frame.new
+        f.add 5
+        f.get_score.must_equal 5
+      end
+    end
   end
 
 end
