@@ -35,6 +35,15 @@ describe Game do
         subject.score_for_frame(2).must_equal 18
       end
     end
+
+    context "scoring a spare" do
+      it 'returns the correct score' do
+        subject.add 3
+        subject.add 7
+        subject.add 3
+        subject.score_for_frame(1).must_equal 13
+      end
+    end
   end
 
 end
