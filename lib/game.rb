@@ -21,7 +21,12 @@ class Game
     _frame.times do |current_frame|
       first_throw = @throws[ball += 1]
       second_throw = @throws[ball +=1]
-      score += (first_throw + second_throw)
+      frame_score = first_throw + second_throw
+      if frame_score == 10
+        score += frame_score + @throws[ball += 1]
+      else
+        score += frame_score
+      end
     end
     score
   end
