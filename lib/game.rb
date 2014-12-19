@@ -19,12 +19,7 @@ class Game
   def add(pins)
     @throws[@current_throw += 1] = pins
     @score += pins
-    if @first_throw
-      @first_throw = false
-      @current_frame += 1
-    else
-      @first_throw = true
-    end
+    adjust_current_frame
   end
 
   def score_for_frame(the_frame)
@@ -41,6 +36,17 @@ class Game
       end
     end
     score
+  end
+
+  private
+
+  def adjust_current_frame
+    if @first_throw
+      @first_throw = false
+      @current_frame += 1
+    else
+      @first_throw = true
+    end
   end
 
 end
