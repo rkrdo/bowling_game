@@ -5,7 +5,7 @@ class Game
     @throws = Array.new(21) { 0 }
     @current_throw = 0
     @current_frame = 1
-    @first_throw = true
+    @first_throw_in_frame = true
   end
 
   def score
@@ -45,14 +45,14 @@ class Game
   private
 
   def adjust_current_frame(pins)
-    if @first_throw
+    if @first_throw_in_frame
       if pins == 10
         @current_frame += 1
       else
-        @first_throw = false
+        @first_throw_in_frame = false
       end
     else
-      @first_throw = true
+      @first_throw_in_frame = true
       @current_frame += 1
     end
     @current_frame = [11 , @current_frame].min
