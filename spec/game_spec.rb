@@ -6,14 +6,6 @@ describe Game do
 
   describe "#get_score" do
 
-    context "with one throw" do
-      it 'returns the throws result' do
-        subject.add 5
-        subject.score.must_equal 5
-        subject.current_frame.must_equal 1
-      end
-    end
-
     context "with two throws" do
       it 'returns the correct result' do
         subject.add 5
