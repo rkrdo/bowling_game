@@ -26,8 +26,9 @@ class Game
     score = 0
     @ball = 0
     the_frame.times do |current_frame|
-      @first_throw = @throws[@ball += 1]
+      @first_throw = @throws[@ball + 1]
       if @first_throw == 10
+        @ball += 1
         score += 10 + (@throws[@ball + 1] + @throws[@ball + 2])
       else
         score += handle_second_throw
@@ -54,11 +55,13 @@ class Game
 
   def handle_second_throw
     score = 0
-    @second_throw = @throws[@ball +=1]
+    @second_throw = @throws[@ball + 2]
     frame_score = @first_throw + @second_throw
     if frame_score == 10
+      @ball += 2
       score += frame_score + @throws[@ball + 1]
     else
+      @ball += 2
       score += frame_score
     end
   end
