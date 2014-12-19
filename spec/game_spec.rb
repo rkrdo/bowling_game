@@ -87,4 +87,10 @@ describe Game do
     g.score.must_equal 133
   end
 
+  it 'heart break' do
+    11.times { g.add 10 }
+    g.add 9
+    g.score.must_equal 299
+  end
+
 end
