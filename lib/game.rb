@@ -9,7 +9,7 @@ class Game
   end
 
   def score
-    @score
+    score_for_frame(current_frame - 1)
   end
 
   def current_frame
