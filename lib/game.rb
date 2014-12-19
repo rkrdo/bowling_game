@@ -10,6 +10,10 @@ class Game
     @score
   end
 
+  def current_frame
+    1 + (@current_throw - 1)/2
+  end
+
   def add(pins)
     @throws[@current_throw += 1] = pins
     @score += pins

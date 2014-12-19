@@ -10,6 +10,7 @@ describe Game do
       it 'returns the throws result' do
         subject.add 5
         subject.score.must_equal 5
+        subject.current_frame.must_equal 1
       end
     end
 
@@ -18,6 +19,7 @@ describe Game do
         subject.add 5
         subject.add 4
         subject.score.must_equal 9
+        subject.current_frame.must_equal 1
       end
     end
 
@@ -33,6 +35,7 @@ describe Game do
         subject.score.must_equal 18
         subject.score_for_frame(1).must_equal 9
         subject.score_for_frame(2).must_equal 18
+        subject.current_frame.must_equal 2
       end
     end
 
