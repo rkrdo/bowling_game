@@ -2,7 +2,7 @@ class Game
 
   def initialize
     @score = 0
-    @throws = Array.new(21)
+    @throws = Array.new(21) { 0 }
     @current_throw = 0
   end
 
