@@ -44,6 +44,19 @@ describe Game do
         subject.score_for_frame(1).must_equal 13
       end
     end
+
+  end
+
+  describe "score of frame after a spare" do
+    it 'returns the correct score' do
+      subject.add 3
+      subject.add 7
+      subject.add 3
+      subject.add 2
+      subject.score_for_frame(1).must_equal 13
+      subject.score.must_equal 18
+      #subject.score_for_frame(2).must_equal 18
+    end
   end
 
 end
