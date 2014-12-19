@@ -23,7 +23,7 @@ class Game
       second_throw = @throws[ball +=1]
       frame_score = first_throw + second_throw
       if frame_score == 10
-        score += frame_score + @throws[ball += 1]
+        score += frame_score + @throws[ball + 1]
       else
         score += frame_score
       end
