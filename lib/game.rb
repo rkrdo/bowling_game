@@ -27,7 +27,7 @@ class Game
     @ball = 0
     the_frame.times do |current_frame|
       @first_throw = @throws[@ball + 1]
-      if @first_throw == 10
+      if strike?
         @ball += 1
         score += 10 + (@throws[@ball + 1] + @throws[@ball + 2])
       else
@@ -64,6 +64,10 @@ class Game
       @ball += 2
       score += frame_score
     end
+  end
+
+  def strike?
+   @first_throw == 10
   end
 
 end
