@@ -4,7 +4,7 @@ class Game
     @score = 0
     @throws = Array.new(21) { 0 }
     @current_throw = 0
-    @current_frame = 0
+    @current_frame = 1
     @first_throw = true
   end
 
@@ -43,9 +43,9 @@ class Game
   def adjust_current_frame
     if @first_throw
       @first_throw = false
-      @current_frame += 1
     else
       @first_throw = true
+      @current_frame += 1
     end
   end
 
