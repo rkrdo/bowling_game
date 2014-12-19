@@ -93,4 +93,12 @@ describe Game do
     g.score.must_equal 299
   end
 
+  it 'tenth frame spare' do
+    9.times { g.add 10 }
+    g.add 9
+    g.add 1
+    g.add 1
+    g.score.must_equal 270
+  end
+
 end
