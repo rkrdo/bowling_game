@@ -57,7 +57,7 @@ class Game
     score = 0
     @second_throw = @throws[@ball + 2]
     frame_score = @first_throw + @second_throw
-    if frame_score == 10
+    if spare?
       @ball += 2
       score += frame_score + @throws[@ball + 1]
     else
@@ -68,6 +68,10 @@ class Game
 
   def strike?
    @first_throw == 10
+  end
+
+  def spare?
+    (@throws[@ball + 1] + @throws[@ball + 2]) == 10
   end
 
   def next_two_balls
