@@ -4,6 +4,8 @@ class Game
     @score = 0
     @throws = Array.new(21) { 0 }
     @current_throw = 0
+    @current_frame = 0
+    @first_throw = true
   end
 
   def score
@@ -11,12 +13,18 @@ class Game
   end
 
   def current_frame
-    1 + (@current_throw - 1)/2
+    @current_frame
   end
 
   def add(pins)
     @throws[@current_throw += 1] = pins
     @score += pins
+    if @first_throw
+      @first_throw = false
+      @current_frame += 1
+    else
+      @first_throw = true
+    end
   end
 
   def score_for_frame(the_frame)
