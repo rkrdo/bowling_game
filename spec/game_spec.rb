@@ -68,4 +68,14 @@ describe Game do
     end
   end
 
+  context "test end of array" do
+    it 'returns the correct score' do
+      9.times { g.add 0 }
+      g.add 2
+      g.add 8 # spare on 10th frame
+      g.add 10 # strike in last position of array
+      g.score.must_equal 20
+    end
+  end
+
 end
