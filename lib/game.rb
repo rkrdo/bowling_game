@@ -15,10 +15,10 @@ class Game
     @score += pins
   end
 
-  def score_for_frame(_frame)
+  def score_for_frame(the_frame)
     score = 0
     ball = 0
-    _frame.times do |current_frame|
+    the_frame.times do |current_frame|
       first_throw = @throws[ball += 1]
       second_throw = @throws[ball +=1]
       frame_score = first_throw + second_throw
