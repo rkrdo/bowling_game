@@ -29,7 +29,7 @@ class Game
       @first_throw = @throws[@ball + 1]
       if strike?
         @ball += 1
-        score += 10 + (@throws[@ball + 1] + @throws[@ball + 2])
+        score += 10 + next_two_balls
       else
         score += handle_second_throw
       end
@@ -68,6 +68,10 @@ class Game
 
   def strike?
    @first_throw == 10
+  end
+
+  def next_two_balls
+    (@throws[@ball + 1] + @throws[@ball + 2])
   end
 
 end
