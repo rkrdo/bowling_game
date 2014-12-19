@@ -64,4 +64,27 @@ describe Game do
     g.score.must_equal 20
   end
 
+  it 'sample game' do
+    g.add 1
+    g.add 4
+    g.add 4
+    g.add 5
+    g.add 6
+    g.add 4
+    g.add 5
+    g.add 5
+    g.add 10
+    g.add 0
+    g.add 1
+    g.add 7
+    g.add 3
+    g.add 6
+    g.add 4
+    g.add 10
+    g.add 2
+    g.add 8
+    g.add 6
+    g.score.must_equal 133
+  end
+
 end
