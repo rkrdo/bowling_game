@@ -55,6 +55,8 @@ describe Game do
       g.add 3
       g.add 6
       g.score_for_frame(1).must_equal 19
+      g.score.must_equal 28
+      g.current_frame.must_equal 3
     end
   end
 
