@@ -45,6 +45,7 @@ describe Game do
         subject.add 7
         subject.add 3
         subject.score_for_frame(1).must_equal 13
+        subject.current_frame.must_equal 2
       end
     end
 
@@ -59,6 +60,7 @@ describe Game do
       subject.score_for_frame(1).must_equal 13
       #subject.score.must_equal 18
       subject.score_for_frame(2).must_equal 18
+      subject.current_frame.must_equal 3
     end
   end
 
