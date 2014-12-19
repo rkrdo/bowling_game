@@ -60,4 +60,12 @@ describe Game do
     end
   end
 
+  context "perfect game" do
+    it 'returns the correct score' do
+      12.times { g.add 10 }
+      g.score.must_equal 300
+      g.current_frame.must_equal 10
+    end
+  end
+
 end
