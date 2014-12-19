@@ -55,6 +55,7 @@ class Game
       @first_throw = true
       @current_frame += 1
     end
+    @current_frame = [11 , @current_frame].min
   end
 
 end
