@@ -26,7 +26,6 @@ class Game
     score = 0
     @ball = 0
     the_frame.times do |current_frame|
-      @first_throw = @throws[@ball + 1]
       if strike?
         @ball += 1
         score += 10 + next_two_balls
@@ -55,11 +54,9 @@ class Game
 
   def handle_second_throw
     score = 0
-    @second_throw = @throws[@ball + 2]
-    frame_score = @first_throw + @second_throw
     if spare?
       @ball += 2
-      score += frame_score + next_ball
+      score += (10 + next_ball)
     else
       score += two_balls_in_frame
       @ball += 2
@@ -68,7 +65,7 @@ class Game
   end
 
   def strike?
-   @first_throw == 10
+   @throws[@ball + 1] == 10
   end
 
   def spare?
