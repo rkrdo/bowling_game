@@ -1,6 +1,7 @@
 require 'scorer'
 
 class Game
+  attr_reader :current_frame
 
   def initialize
     @current_frame = 1
@@ -10,10 +11,6 @@ class Game
 
   def score
     score_for_frame(current_frame)
-  end
-
-  def current_frame
-    @current_frame
   end
 
   def add(pins)
