@@ -30,8 +30,8 @@ class Game
         score += 10 + next_two_balls_for_strike
         @ball += 1
       elsif spare?
+        score += (10 + next_ball_for_spare)
         @ball += 2
-        score += (10 + next_ball)
       else
         score += two_balls_in_frame
         @ball += 2
@@ -68,8 +68,8 @@ class Game
     (@throws[@ball + 2] + @throws[@ball + 3])
   end
 
-  def next_ball
-    @throws[@ball + 1]
+  def next_ball_for_spare
+    @throws[@ball + 3]
   end
 
   def two_balls_in_frame
