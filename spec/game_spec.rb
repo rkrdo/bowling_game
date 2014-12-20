@@ -53,7 +53,6 @@ describe Game do
   it 'perfect game' do
     12.times { g.add 10 }
     g.score.must_equal 300
-    g.current_frame.must_equal 11
   end
 
   it 'end of array' do

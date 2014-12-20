@@ -9,7 +9,7 @@ class Game
   end
 
   def score
-    score_for_frame(current_frame - 1)
+    score_for_frame(current_frame)
   end
 
   def current_frame
@@ -39,7 +39,7 @@ class Game
   end
 
   def advance_frame
-    @current_frame = [11 , @current_frame + 1].min
+    @current_frame = [10 , @current_frame + 1].min
   end
 
   def adjust_frame_for_strike(pins)
