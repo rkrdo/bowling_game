@@ -30,7 +30,7 @@ class Game
         score += 10 + next_two_balls_for_strike
         @ball += 1
       elsif spare?
-        score += (10 + next_ball_for_spare)
+        score += 10 + next_ball_for_spare
         @ball += 2
       else
         score += two_balls_in_frame
