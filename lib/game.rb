@@ -3,7 +3,6 @@ require 'scorer'
 class Game
 
   def initialize
-    @score = 0
     @current_frame = 1
     @first_throw_in_frame = true
     @scorer = Scorer.new
@@ -19,7 +18,6 @@ class Game
 
   def add(pins)
     @scorer.add_throw pins
-    @score += pins
     adjust_current_frame(pins)
   end
 
