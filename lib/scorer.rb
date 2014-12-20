@@ -34,7 +34,7 @@ class Scorer
   end
 
   def spare?
-    (@throws[@ball + 1] + @throws[@ball + 2]) == 10
+    two_balls_in_frame == 10
   end
 
   def next_two_balls_for_strike
