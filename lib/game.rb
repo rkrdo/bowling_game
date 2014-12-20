@@ -61,9 +61,10 @@ class Game
       @ball += 2
       score += frame_score + next_ball
     else
+      score += two_balls_in_frame
       @ball += 2
-      score += frame_score
     end
+    score
   end
 
   def strike?
@@ -80,6 +81,10 @@ class Game
 
   def next_ball
     @throws[@ball + 1]
+  end
+
+  def two_balls_in_frame
+    @throws[@ball + 1] + @throws[@ball + 2]
   end
 
 end
