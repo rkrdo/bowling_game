@@ -27,8 +27,8 @@ class Game
     @ball = 0
     the_frame.times do |current_frame|
       if strike?
+        score += 10 + next_two_balls_for_strike
         @ball += 1
-        score += 10 + next_two_balls
       elsif spare?
         @ball += 2
         score += (10 + next_ball)
@@ -64,8 +64,8 @@ class Game
     (@throws[@ball + 1] + @throws[@ball + 2]) == 10
   end
 
-  def next_two_balls
-    (@throws[@ball + 1] + @throws[@ball + 2])
+  def next_two_balls_for_strike
+    (@throws[@ball + 2] + @throws[@ball + 3])
   end
 
   def next_ball
