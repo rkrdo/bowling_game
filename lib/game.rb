@@ -28,27 +28,15 @@ class Game
   private
 
   def adjust_current_frame(pins)
-    if @first_throw_in_frame
-      if adjust_frame_for_strike(pins) == false
-        @first_throw_in_frame = false
-      end
-    else
-      @first_throw_in_frame = true
+    if (@first_throw_in_frame && (pins == 10)) || !@first_throw_in_frame
       advance_frame
+    else
+      @first_throw_in_frame = false
     end
   end
 
   def advance_frame
     @current_frame = [10 , @current_frame + 1].min
-  end
-
-  def adjust_frame_for_strike(pins)
-    if pins == 10
-      advance_frame
-      true
-    else
-      false
-    end
   end
 
 end
