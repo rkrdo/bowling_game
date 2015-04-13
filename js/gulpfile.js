@@ -6,10 +6,7 @@ var mocha = require('gulp-mocha');
 gulp.task('mocha', function() {
   return gulp.src(['test/*.js'], { read: false })
   .pipe(mocha({
-    reporter: 'spec',
-    globals: {
-      should: require('chai').assert
-    }
+    reporter: 'spec'
   }));
 });
 
