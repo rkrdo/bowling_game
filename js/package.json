@@ -1,0 +1,25 @@
+{
+  "name": "bowling-game",
+  "version": "1.0.0",
+  "description": "Bowling game scoring app as seen in ch 6 of PPP",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rkrdo/bowling_game"
+  },
+  "author": "Ricardo Cruz",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/rkrdo/bowling_game/issues"
+  },
+  "homepage": "https://github.com/rkrdo/bowling_game",
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "gulp": "^3.8.11",
+    "gulp-mocha": "^2.0.1",
+    "gulp-util": "^3.0.4"
+  }
+}
