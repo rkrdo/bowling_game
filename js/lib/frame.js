@@ -1,10 +1,17 @@
 var Frame = (function () {
-  function Frame() { };
+  function Frame() {
+    this.score = 0;
+  };
 
   Frame.prototype = {
     constructor: Frame,
+
     getScore: function() {
-      return 0;
+      return this.score;
+    },
+
+    add: function(pins) {
+      this.score += pins;
     }
   }
 
