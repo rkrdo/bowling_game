@@ -1,7 +1,8 @@
 /*  https://github.com/gulpjs/gulp/blob/master/docs/recipes/mocha-test-runner-with-gulp.md */
 
-var gulp = require('gulp');
-var mocha = require('gulp-mocha');
+var gulp = require('gulp'),
+  babel = require('babel/register'),
+  mocha = require('gulp-mocha');
 
 gulp.task('mocha', function() {
   return gulp.src(['test/*.js'], { read: false })
