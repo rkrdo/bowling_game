@@ -1,21 +1,15 @@
-var Frame = (function () {
-  function Frame() {
+class Frame {
+  constructor() {
     this.score = 0;
-  };
-
-  Frame.prototype = {
-    constructor: Frame,
-
-    getScore: function() {
-      return this.score;
-    },
-
-    add: function(pins) {
-      this.score += pins;
-    }
   }
 
-  return Frame;
-}());
+  getScore() {
+    return this.score;
+  }
+
+  add(pins) {
+    this.score += pins;
+  }
+}
 
 module.exports = Frame;
